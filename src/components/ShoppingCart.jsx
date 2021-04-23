@@ -28,7 +28,7 @@ export default function ShoppingCart({
         {quantity > 0 ? (
           <>
             <h5>Shopping summary: </h5>
-            <p>{`Sub Total (${quantity} items): ${totalPrice}`}</p>
+            <p>{`Sub Total (${quantity} items): ${totalPrice.toFixed(2)}`}</p>
           </>
         ) : (
           <h5>Shopping Cart is empty</h5>

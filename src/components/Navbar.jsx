@@ -1,33 +1,78 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../images/logo.png";
-import { Link } from "react-router-dom";
 
-const Navbar = ({ quantity }) => {
+function NavBar({ quantity }) {
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+
+  const handleClick = () => setClick(!click);
+
+  const closeMobileMenu = () => setClick(false);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener("resize", showButton);
+
   return (
-    <div className="navbar">
-      <div className="logo-container">
-        <Link to="/">
-          <img className="logo" src={logo} alt="logo" />
-        </Link>
-      </div>
-      <div className="form-holder">
-        <form action="/" method="get">
-          <input
-            type="text"
-            id="header-search"
-            placeholder="Search Items"
-            name="s"
-          />
-          <button type="submit">Search</button>
-        </form>
-      </div>
-      <Link to="/cart">
-        <i className="fas fa-shopping-cart fa-2x"></i>
-      </Link>
-      <p>Amount: {quantity}</p>
-    </div>
+    <>
+      <nav className="navbar">
+        <div className="navbar-container">
+          <div className="logo-container">
+            <Link to="/" onClick={closeMobileMenu}>
+              <img src={logo} alt="logo" />
+            </Link>
+          </div>
+          <div className="menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          </div>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                Products
+              </Link>
+            </li>
+            <li className="nav-item">
+              <input
+                className="nav-links"
+                type="text"
+                id="header-search"
+                placeholder="Search Products"
+                name="s"
+              />
+            </li>
+            <li className="nav-item">
+              <button className="nav-links" type="submit">
+                Search
+              </button>
+            </li>
+          </ul>
+          <div className="cart-icon">
+            <Link to="/cart">
+              <i className="fas fa-shopping-cart fa-2x"></i>
+              <div className="notification">{quantity}</div>
+            </Link>
+          </div>
+        </div>
+      </nav>
+    </>
   );
-};
+}
 
-export default Navbar;
+export default NavBar;
