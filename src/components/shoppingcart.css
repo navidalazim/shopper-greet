@@ -1,0 +1,14 @@
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-item {
+    max-width: 320px;
+    max-height: 400px;
+    margin: 8px;
+}
+
+.cart-item img {
+    width: 80%;
+}

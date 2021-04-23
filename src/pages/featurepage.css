@@ -1,0 +1,16 @@
+.product-card {
+  display: flex;
+  margin: 8px;
+  border-bottom: 1px solid #b5c1bd;
+}
+
+.product-card img {
+    height: 216px;
+    width: 208px;
+}
+
+.product-details {
+  align-self: center;
+  flex: 1;
+  padding-left: 16px;
+}
