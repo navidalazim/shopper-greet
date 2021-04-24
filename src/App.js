@@ -53,21 +53,21 @@ const products = [
     image: ca,
     products: [
       {
-        id: 1,
+        id: 4,
         name: 'SAMSUNG ELECTRONICS EVO Select 256GB MicroSDXC UHS-I U3 100MB/s Full HD & 4K UHD Memory Card with Adapter (MB-ME256HA)',
         brand: 'Samsung',
         price: 49.99,
         image: ca1,
       },
       {
-        id: 2,
+        id: 5,
         name: 'SanDisk 128GB Ultra MicroSDXC UHS-I Memory Card with Adapter - 120MB/s, C10, U1, Full HD, A1, Micro SD Card - SDSQUA4-128G-GN6MA',
         brand: 'SanDisk',
         price: 24.99,
         image: ca2,
       },
       {
-        id: 3,
+        id: 6,
         name: 'Logitech BRIO Ultra HD Webcam for Video Conferencing, Recording, and Streaming - Black',
         brand: 'Logitech',
         price: 219.99,

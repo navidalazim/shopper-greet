@@ -15,14 +15,14 @@ export default function FeaturePage({ products, addToCart }) {
   }, [categoryProduct]);
 
   return (
-    <div>
+    <div className="container">
       {availableProducts.map((product) => (
         <div key={product.id} className="product-card">
           <img src={product.image} alt={product.name} />
           <div className="product-details">
-            <h5>{product.name}</h5>
-            <p>{product.brand}</p>
-            <p>{product.price}</p>
+            <h3>{product.name}</h3>
+            <p>Brand: {product.brand}</p>
+            <p>${product.price}</p>
             <button onClick={() => addToCart(product)}>Add to cart</button>
           </div>
         </div>

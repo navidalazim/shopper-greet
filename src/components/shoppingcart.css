@@ -1,14 +1,126 @@
+.shopping-cart {
+  margin: 8px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 3px;
+}
+
 .cart-items {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
 }
 
 .cart-item {
-    max-width: 320px;
-    max-height: 400px;
-    margin: 8px;
+  display: flex;
+  background-color: white;
 }
 
 .cart-item img {
-    width: 80%;
+  width: 80px;
+  margin: 16px;
+}
+
+.cart-item h4 {
+  margin-top: 16px;
+  font-size: 1.1rem;
+}
+
+.cart-item-details {
+  margin-left: 16px;
+  margin-top: 16px;
+  flex: 1;
+}
+
+.cart-item-details h5 {
+  font-size: 1rem;
+}
+
+.cart-item-details p {
+    margin-top: 8px;
+}
+
+.buttons {
+    margin-top: 8px;
+}
+
+.plus-btn {
+  color: white;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  border: #4cae4c;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.plus-btn:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.minus-btn {
+    margin-left: 8px;
+    color: white;
+    height: 24px;
+    width: 24px;
+    border-radius: 4px;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .minus-btn:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+
+.summary {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.totals h2 {
+  font-size: 1.3rem;
+}
+
+.totals p {
+  font-size: 1.1rem;
+}
+
+.totals button {
+  color: white;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #5cb85c;
+  border: #4cae4c;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.totals button:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
 }

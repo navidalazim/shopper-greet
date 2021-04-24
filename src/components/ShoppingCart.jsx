@@ -12,24 +12,40 @@ export default function ShoppingCart({
   return (
     <div className="shopping-cart">
       <h1>Shopping Cart</h1>
+      <hr />
       <div className="cart-items">
         {cartItems.map((item) => (
-          <div key={item.id} className="cart-item">
-            <img src={item.image} alt={item.name} />
-            <h5>{item.name}</h5>
-            <p>Quantity: {item.qty}</p>
-            <p>Total Price: {(item.price * item.qty).toFixed(2)}</p>
-            <button onClick={() => addToCart(item)}>Add</button>
-            <button onClick={() => removeFromCart(item)}>Remove</button>
+          <div key={item.id}>
+            <div className="cart-item">
+              <img src={item.image} alt={item.name} />
+              <div className="cart-item-details">
+                <h5>{item.name}</h5>
+                <p>Quantity: {item.qty}</p>
+                <div className="buttons">
+                  <button className="plus-btn" onClick={() => addToCart(item)}>
+                    +
+                  </button>
+                  <button
+                    className="minus-btn"
+                    onClick={() => removeFromCart(item)}
+                  >
+                    -
+                  </button>
+                </div>
+              </div>
+              <h4>${(item.price * item.qty).toFixed(2)}</h4>
+            </div>
+            <hr />
           </div>
         ))}
       </div>
-      <div>
+      <div className={quantity === 0 ? "" : "summary"}>
         {quantity > 0 ? (
-          <>
-            <h5>Shopping summary: </h5>
-            <p>{`Sub Total (${quantity} items): ${totalPrice.toFixed(2)}`}</p>
-          </>
+          <div className="totals">
+            <h2>Shopping summary </h2>
+            <p>{`Sub Total (${quantity} items): $${totalPrice.toFixed(2)}`}</p>
+            <button>Check out</button>
+          </div>
         ) : (
           <h5>Shopping Cart is empty</h5>
         )}

@@ -1,3 +1,10 @@
+.container {
+  margin: 8px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 3px;
+}
+
 .product-card {
   display: flex;
   margin: 8px;
@@ -5,12 +12,38 @@
 }
 
 .product-card img {
-    height: 216px;
-    width: 208px;
+  height: 216px;
+  width: 208px;
 }
 
 .product-details {
-  align-self: center;
   flex: 1;
   padding-left: 16px;
+  margin: 16px;
+}
+
+.product-details p {
+  margin-top: 8px;
+}
+
+.product-details button {
+  margin-top: 8px;
+  color: white;
+  width: 30%;
+  height: 2.5rem;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  border: #4cae4c;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.product-details button:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
 }
