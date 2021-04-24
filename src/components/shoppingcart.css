@@ -36,11 +36,12 @@
 }
 
 .cart-item-details p {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .buttons {
-    margin-top: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .plus-btn {
@@ -65,26 +66,26 @@
 }
 
 .minus-btn {
-    margin-left: 8px;
-    color: white;
-    height: 24px;
-    width: 24px;
-    border-radius: 4px;
-    background-color: #dc3545;
-    border-color: #dc3545;
-    display: inline-block;
-    margin-bottom: 0;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    border: 1px solid transparent;
-  }
-  .minus-btn:hover {
-    color: #fff;
-    background-color: #c82333;
-    border-color: #bd2130;
-  }
+  margin-left: 8px;
+  color: white;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.minus-btn:hover {
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
+}
 
 .summary {
   display: flex;
