@@ -18,9 +18,3 @@
   max-height: 240px;
   align-self: center;
 }
-
-@media screen and (max-width: 600px) {
-  .categories {
-    justify-content: center;
-  }
-}
