@@ -125,3 +125,18 @@
   background-color: #218838;
   border-color: #1e7e34;
 }
+
+@media screen and (max-width: 600px) {
+  .cart-item img {
+    height: 80px;
+  }
+  .cart-item-details {
+    margin-left: 0px;
+  }
+  .cart-item-details h5{
+    font-size: 0.8rem;
+  }
+  .cart-item-details p {
+    font-size: 0.8rem;
+  }
+}
