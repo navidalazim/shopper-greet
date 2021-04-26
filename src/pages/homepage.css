@@ -18,9 +18,16 @@
   max-height: 240px;
   align-self: center;
 }
+h1 {
+  margin-left: 18px;
+}
 
 @media screen and (max-width: 600px) {
   .categories {
     justify-content: center;
+  }
+
+  h1 {
+    margin-left: 22px;
   }
 }
